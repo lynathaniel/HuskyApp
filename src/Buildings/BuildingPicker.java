@@ -8,13 +8,12 @@ public class BuildingPicker {
         this.target = arr[ind];
     }
 
-//isdcshjhj
     public static class Building {
         private String abrev;
         private String name;
         private double lat;
         private double longi;
-        public building(String abrev, String name, double lat, double longi) {
+        public Building (String abrev, String name, double lat, double longi) {
             this.abrev = abrev;
             this.name = name;
             this.lat = lat;
