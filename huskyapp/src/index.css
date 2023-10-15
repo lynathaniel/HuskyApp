@@ -1,40 +1,286 @@
 
-h1 {
+.header {
     color: white;
-    background-color: #242424;
-    margin-top: auto;
-    margin-bottom: auto;
     height: auto;
-    padding: 5rem;
-    text-align: center;
-    font-size: 50px;
-}
-.channel {
-    padding: 0;
-    margin-top: auto;
-    list-style: none;
-    background-color: #242424;
+    font-size: 12px;
+    position: relative;
+    bottom: 500px;
+    margin-right: 10rem;
 }
 
-a {
-    color: white;
-    font-size: 35px;
-    padding: 3rem;
+.header .bouncing-texting {
+    animation: bounce 1s infinite;
 }
 
-.app-container {
+.text {
+    color: #242424;
+    font-size: 20px;
+    word-spacing: 5px;
+}
+
+.text:hover::after {
+    content: "Read";
+    color: #2294fb;
+}
+
+.chatbox {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    padding-right: 250px;
+}
+
+.submit {
+    position: absolute;
+    bottom: 0;
+    margin-left: 32rem;
+    margin-bottom: 1rem;
+}
+
+
+/*---------------Andrew's Styling--------------------------*/ 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: gra;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  
+  body {
+    margin: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-}
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+  
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    a:hover {
+      color: #747bff;
+    }
+    button {
+      background-color: #f9f9f9;
+    }
+  }
 
-.main-content {
+/* BounceText.css */
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .signin-form .bouncing-text {
+    font-size: 26px;
+    animation: bounce 1s infinite;
+  } 
+
+  /* src/components/SignIn.css */
+  .signin-form {
+    width: 450px;
+    margin: 0 auto;
+  }
+  
+  .signin-form h2 {
+    text-align: center;
+  }
+
+  
+  .signin-form form {
     display: flex;
-    flex: 1;
+    flex-direction: column;
+  }
+  
+  .signin-form label {
+    margin-bottom: 5px;
+  }
+  
+  .signin-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .email {
+    text-align: center;
+  }
+
+  .password {
+    text-align: center;
+  }
+
+/* Tailwind Styles */
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
 }
 
-.nav-container {
-    flex: 0 0 25%;
-    background-color: #242424;
-    padding: 20px;
+.black_btn {
+  @apply rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black;
+}
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
+}
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-600 sm:text-xl text-center max-w-2xl;
+}
+
+.url_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 pl-10 pr-12 text-sm shadow-lg font-satoshi font-medium focus:border-black focus:outline-none focus:ring-0;
+}
+
+/* .submit_btn {
+  @apply hover:border-gray-700 hover:text-gray-700 absolute inset-y-0 right-0 my-1.5 mr-1.5 flex w-10 items-center justify-center rounded border border-gray-200 font-sans text-sm font-medium text-gray-400;
+} */
+
+.link_card {
+  @apply p-3 flex justify-start items-center flex-row bg-white border border-gray-200 gap-3 rounded-lg cursor-pointer;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.blue_gradient {
+  @apply font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.summary_box {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-4;
+  
+}
+
+
+
+/* ------------------------------------------------Nam's Styling-------------------------------------------------------- */
+
+.crop-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+.aspect-ratio-16x9 {
+  padding-top: calc(16 / 9 * 100%);
+}
+
+.video-container {
+  z-index: 1;
+  top: 40px;
+  left: 205px;
+  overflow: hidden; /* Hide any overflowing content */
+  position: absolute; /* Establish positioning context */
+
+  /* Crop the video feed */
+  /* You can adjust the values to control the cropping area */
+  clip-path: inset(0% 25% round 20px);
+}
+
+.picture-button1 {
+  position: absolute;
+  top: 670px;
+  left: 500px;
+  z-index: 2;
+  border: 10px solid rgb(254, 254, 254);
+  border-radius: 100px;
+  height:75px;
+  width: 75px;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.picture-button1:hover {
+  opacity: 1;
+}
+
+.picture-button2 {
+  position: absolute;
+  top: 670px;
+  left: 500px;
+  z-index: 2;
+  border: 10px solid rgb(254, 254, 254);
+  background-color: rgb(254, 254, 254);
+  border-radius: 100px;
+  height:75px;
+  width: 75px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.picture-button2:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.picture-button2:active {
+  background-color: rgb(254, 254, 254);
+  opacity: 0.5;
 }
