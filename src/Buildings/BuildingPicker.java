@@ -6,6 +6,12 @@ import java.io.FileNotFoundException;
 public class BuildingPicker {
     public Building[] allBuildings;
     public int lastIndex;
+    public Building target;
+
+    public BuildingPicker() throws FileNotFoundException {
+        createBuildings();
+        chooseBuildings();
+    }
     
     // This creates an array of buildings given a file of UW buildings
     public Building[] createBuildings() throws FileNotFoundException{
@@ -37,13 +43,13 @@ public class BuildingPicker {
     // This returns a unique building by picking a random index of the 
     // array of buildings. If the same number has been picked twice
     // This will pull a new number until the number is different
-    public Building chooseBuildings(){
+    public void chooseBuildings(){
         Random r = new Random();
         int whichBuilding = r.nextInt(28);
         while(whichBuilding == lastIndex){
             whichBuilding = r.nextInt(28);
         }
-        return allBuildings[whichBuilding];
+        this.target=allBuildings[whichBuilding];
     }
 
     public static class Building {
