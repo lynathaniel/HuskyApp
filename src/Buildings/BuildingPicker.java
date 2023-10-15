@@ -29,6 +29,7 @@ public class BuildingPicker {
         }
 
         return result;
+        //s
     }
     
     public static class Building {
