@@ -1,0 +1,34 @@
+[
+    {
+        "userId": "Bugs",
+        "userName": "Bunny",
+        "userImg": "/img/person1.jpeg",
+        "text": "It's so cold out today!",
+        "timestamp": 1320161040000,
+        "channel": "general"
+    },
+    {
+        "uid": "Mike",
+        "userName": "HardMikes",
+        "userImg": "/img/person2.JPG",
+        "text": "It's warm over here",
+        "timestamp": 1320161760000,
+        "channel": "general"
+    },
+    {
+        "userId": "Frog",
+        "userName": "Self-Care",
+        "userImg": "/img/person3.jpeg",
+        "text": "Lucky duck",
+        "timestamp": 1320162060000,
+        "channel": "general"
+    },
+    {
+        "userId": "Andrew",
+        "userName": "andororo",
+        "userImg": "/img/person4.jpeg",
+        "text": "I'm not a duck!",
+        "timestamp": 1320162120000,
+        "channel": "general"
+    }
+  ]

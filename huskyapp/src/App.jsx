@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Header } from './Header.jsx';
 import { History } from './Nav.jsx';
-//import { ChatPane } from './ChatPane.js';
+import { Chat } from './Chat.jsx';
 function App() {
 
   //what content should my App look like?
@@ -11,10 +11,10 @@ function App() {
       <Header />
       <div className="main-content">
         <div className='nav-container'>
-          <History />
+        <Chat />
         </div>
         <div className='chat-pane'>
-          {/* <ChatPane /> */}
+        <History />
         </div>
       </div>
     </div>
