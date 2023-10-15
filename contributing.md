@@ -1,6 +1,6 @@
 # ShareCampus 📍
 
-Brief description of your project.
+University of Washington geochache type application. Students/tourists when arriving at a day's building will be notified about what UW artifact to find in the building.
 
 ## Table of Contents
 
