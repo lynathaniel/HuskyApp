@@ -29,11 +29,15 @@ List any prerequisites that users need to have installed or set up before they c
    ```bash
    cd your-repo
 
-4. Install project dependencies:
+3. Install Router Dom:
+   ```bash
+   npm install react-router-dom
+
+5. Install project dependencies:
    ```bash
    npm install
 
-5. Start the development server:
+6. Start the development server:
    ```bash
    npm run dev
 
