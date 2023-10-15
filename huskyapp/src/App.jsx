@@ -1,25 +1,21 @@
 import React from 'react';
+import { useState } from 'react'
+import { SignIn } from "./components/SignIn";
+import { Demo } from "./components/Demo";
+import './App.css'
 
-import { Header } from './Header.jsx';
-import { History } from './Nav.jsx';
-//import { ChatPane } from './ChatPane.js';
-function App() {
-
-  //what content should my App look like?
+const App = () => {
+  const [count, setCount] = useState(0)
   return (
-    <div className='app-container'>
-      <Header />
-      <div className="main-content">
-        <div className='nav-container'>
-          <History />
+    <main>
+      <div className="body">
+        <div className="app">
+          <SignIn />
         </div>
-        <div className='chat-pane'>
-          {/* <ChatPane /> */}
-        </div>
+        
       </div>
-    </div>
-  );
+    </main>
+  )
 }
-
 
 export default App
