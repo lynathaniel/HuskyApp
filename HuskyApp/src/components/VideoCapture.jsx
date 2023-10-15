@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-function VideoCapture() {
+function VideoCapture(props) {
   useEffect(() => {
     async function startVideoCapture() {
       try {
@@ -19,8 +19,10 @@ function VideoCapture() {
 
   return (
     <div className="video-container">
-      <div className="picture-button1" id="shutter2"></div>
-      <div className="picture-button2" id="shutter1" onClick={(e) => {videoElement.pause(); shutter1.style.display = "none"; shutter2.style.display = "none"}}></div>
+        {props.isVisible &&
+        <div className="picture-button1" id="shutter2"></div>}
+        {props.isVisible && <div className="picture-button2" id="shutter1" onClick={(e) => {videoElement.pause(); shutter1.style.display = "none"; shutter2.style.display = "none";}}></div>
+        }
       <video id="videoElement" width="1080" autoPlay></video>
     </div>
   );
