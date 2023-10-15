@@ -79,7 +79,7 @@ export function GeoLocator() {
 
   return (
     <div>
-      <button className='bg-red-600 ml-24 mt-96' onClick={() => getLoc()}></button>
+      <button className='bg-red-600 ml-24 mt-96 h-12 w-56' onClick={() => getLoc()}>Am I near?</button>
       <div className="video">
       <VideoCapture isVisible={true}/>
       </div>
