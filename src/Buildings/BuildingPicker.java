@@ -12,9 +12,9 @@ public class BuildingPicker {
         createBuildings();
         chooseBuildings();
     }
-    //penis
+
     // This creates an array of buildings given a file of UW buildings
-    public Building[] createBuildings() throws FileNotFoundException{
+    public void createBuildings() throws FileNotFoundException{
         Building[] result = new Building[28];
         Scanner fileScan = new Scanner(new File("src\\Buildings\\buildings"));
         int tracker = 0;
@@ -37,7 +37,7 @@ public class BuildingPicker {
             result[tracker] = new Building(abrev, fullName, logi, longi);
             tracker++;
         }
-        return result;
+        allBuildings = result;
     }
     
     // This returns a unique building by picking a random index of the 
