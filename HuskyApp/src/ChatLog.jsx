@@ -41,7 +41,6 @@ export function ChatLog() {
           onChange={handleCommentChange}
           onKeyDown={handleKeyDown}
         />
-        <button className="submit" onClick={handleCommentSubmit}>Submit</button>
       </div>
     </div>
   );
