@@ -2,7 +2,7 @@ package Buildings;
 import java.util.*;
 import java.io.*;
 public class BuildingPicker {
-    public Building target;
+
 
     public Building[] createBuildings() throws FileNotFoundException{
         Building[] result = new Building[28];
@@ -30,11 +30,7 @@ public class BuildingPicker {
 
         return result;
     }
-    public void buildingChoice(Building[] arr) {
-        Random rand = new Random();
-        int ind = rand.nextInt(28);
-        this.target = arr[ind];
-    }
+
 
     public static class Building {
         private String abrev;
