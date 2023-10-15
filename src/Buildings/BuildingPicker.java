@@ -12,7 +12,7 @@ public class BuildingPicker {
         createBuildings();
         chooseBuildings();
     }
-    //penis
+
     // This creates an array of buildings given a file of UW buildings
     public Building[] createBuildings() throws FileNotFoundException{
         Building[] result = new Building[28];
@@ -31,7 +31,7 @@ public class BuildingPicker {
             buildingInfo = buildingInfo.substring(tempLogi.length() + 1);
 
             String tempLongi = buildingInfo.substring(0);
-
+            
             double logi = Double.parseDouble(tempLogi);
             double longi = Double.parseDouble(tempLongi);
             result[tracker] = new Building(abrev, fullName, logi, longi);
