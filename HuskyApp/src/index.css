@@ -3,8 +3,7 @@
     color: white;
     height: auto;
     font-size: 12px;
-    position: relative;
-    bottom: 500px;
+    margin-bottom: 60rem;
     margin-right: 100rem;
 }
 
@@ -20,7 +19,7 @@
 
 .text:hover::after {
     content: "Read";
-    color: #2294fb;
+    color: rgb(220 38 38);
 }
 
 .chatbox {
@@ -33,6 +32,13 @@
     font-size: 22px;
 }
 
+.MeNear {
+  background-color: rgb(220 38 38);
+  position: absolute;
+  bottom: 0;
+  margin-left: 48rem;
+  margin-bottom: 5rem;
+}
 
 /*---------------Andrew's Styling--------------------------*/ 
 
