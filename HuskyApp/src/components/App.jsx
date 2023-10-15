@@ -13,7 +13,7 @@ export const App = () => {
       <Sidebar/>
       <GeoLocator />
       <div className='header' >
-        <h1 className='bouncing-texting'>ShareCampus📍</h1>
+        <h1 className='bouncing-texting ml-16'>ShareCampus📍</h1>
         
       </div>
       </div>

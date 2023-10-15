@@ -230,14 +230,14 @@
 
 .video-container {
   z-index: 1;
-  top: 40px;
-  left: 205px;
-  overflow: hidden; /* Hide any overflowing content */
+  top: 150px;
+  left: 280px;
+/* Hide any overflowing content */
   position: absolute; /* Establish positioning context */
 
   /* Crop the video feed */
   /* You can adjust the values to control the cropping area */
-  clip-path: inset(0% 25% round 20px);
+  clip-path: inset(0% 25% round 50px);
 }
 
 .picture-button1 {
