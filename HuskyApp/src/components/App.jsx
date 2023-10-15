@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import { Header } from './Header.jsx';
+
 import { Sidebar } from './Sidebar.jsx';
 import { GeoLocator } from './GeoLocator.jsx'
 
@@ -10,6 +10,7 @@ export const App = () => {
   //what content should my App look like?
   return (
     <div className='mx-auto mt-8'>
+
       <Sidebar/>
       <GeoLocator />
       <div className='header' >
