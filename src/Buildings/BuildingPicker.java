@@ -9,7 +9,7 @@ public class BuildingPicker {
         private String name;
         private double lat;
         private double longi;
-
+//penis
         public Building (String abrev, String name, double lat, double longi) {
             this.abrev = abrev;
             this.name = name;
