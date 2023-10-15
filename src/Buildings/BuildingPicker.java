@@ -12,7 +12,7 @@ public class BuildingPicker {
         createBuildings();
         chooseBuildings();
     }
-    
+    //penis
     // This creates an array of buildings given a file of UW buildings
     public Building[] createBuildings() throws FileNotFoundException{
         Building[] result = new Building[28];
