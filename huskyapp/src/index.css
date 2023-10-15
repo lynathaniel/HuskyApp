@@ -18,6 +18,22 @@ h1 {
 a {
     color: white;
     font-size: 35px;
-    padding: 3rem;
-    margin-left: 20px;
+    padding: 1rem;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.nav-container {
+    flex: 0 0 25%;
+    background-color: #242424;
+    padding: 20px;
 }

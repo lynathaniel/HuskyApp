@@ -7,13 +7,13 @@ function App() {
 
   //what content should my App look like?
   return (
-    <div>
+    <div className='app-container'>
       <Header />
-      <div className="row flex-grow-1">
-        <div>
+      <div className="main-content">
+        <div className='nav-container'>
           <History />
         </div>
-        <div>
+        <div className='chat-pane'>
           {/* <ChatPane /> */}
         </div>
       </div>
