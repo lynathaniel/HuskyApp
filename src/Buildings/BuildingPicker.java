@@ -1,9 +1,9 @@
 package Buildings;
 import java.util.*;
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 public class BuildingPicker {
-
-
+    public Building target;
     public Building[] createBuildings() throws FileNotFoundException{
         Building[] result = new Building[28];
         Scanner fileScan = new Scanner(new File("src\\Buildings\\buildings"));
@@ -30,7 +30,11 @@ public class BuildingPicker {
 
         return result;
     }
-
+    public void buildingChoice(Building[] arr) {
+        Random rand = new Random();
+        int ind = rand.nextInt(28);
+        this.target = arr[ind];
+    }
 
     public static class Building {
         private String abrev;
@@ -44,13 +48,16 @@ public class BuildingPicker {
             this.lat = lat;
             this.longi = longi;
         }
-        public String getAbrev() {
+
+        public String getAbrev () {
             return abrev;
         }
-        public String getName() {
+
+        public String getName () {
             return name;
         }
-        public double getLat() {
+
+        public double getLat () {
             return lat;
         }
     }
