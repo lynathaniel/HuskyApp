@@ -57,7 +57,7 @@ public class BuildingPicker {
         private String name;
         private double lat;
         private double longi;
-//penis
+
         public Building (String abrev, String name, double lat, double longi) {
             this.abrev = abrev;
             this.name = name;
@@ -80,6 +80,7 @@ public class BuildingPicker {
         // to string need to display all fields 
         public String toString(){
             return "Building{" +
+                    "abbreviation='" + abrev + "\' ," + 
                     "abbreviation='" + abrev + "\' '," + 
                     "name='" + name + "\' '," + 
                     "latitude=" + lat + "," + 
