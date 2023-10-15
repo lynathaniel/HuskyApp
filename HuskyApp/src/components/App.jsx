@@ -2,6 +2,7 @@ import React from 'react';
 
 // import { Header } from './Header.jsx';
 import { Sidebar } from './Sidebar.jsx';
+import { GeoLocator } from './GeoLocator.jsx'
 
 import '../index.css'
 
@@ -10,8 +11,10 @@ export const App = () => {
   return (
     <div className='mx-auto mt-8'>
       <Sidebar/>
+      <GeoLocator />
       <div className='header' >
         <h1 className='bouncing-texting'>ShareCampus📍</h1>
+        
       </div>
       </div>
   );

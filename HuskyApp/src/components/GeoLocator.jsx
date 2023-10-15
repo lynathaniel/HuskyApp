@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import VideoCapture from "./VideoCapture";
 
-function GeoLocator() {
+export function GeoLocator() {
 
   let id;
   let target;
@@ -81,7 +81,7 @@ function GeoLocator() {
     <div>
       <button className="cover" onClick={() => getLoc()}></button>
       <div className="video">
-      <VideoCapture isVisible={found}/>
+      <VideoCapture isVisible={true}/>
       </div>
     </div>
   );
