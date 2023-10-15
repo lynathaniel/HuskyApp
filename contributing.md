@@ -27,15 +27,15 @@ List any prerequisites that users need to have installed or set up before they c
 
 2. Change into the project directory:
    ```bash
-      cd your-repo
+   cd your-repo
 
 4. Install project dependencies:
    ```bash
-      npm install
+   npm install
 
 5. Start the development server:
    ```bash
-      npm run dev
+   npm run dev
 
 Open your web browser and navigate to http://localhost:3000 to view the application.
 
