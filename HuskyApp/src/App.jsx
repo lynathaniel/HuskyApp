@@ -8,7 +8,7 @@ const App = () => {
   const [count, setCount] = useState(0)
   return (
     <main>
-      <div className="main">
+      <div className="body">
         <div className="app">
           <SignIn />
         </div>
