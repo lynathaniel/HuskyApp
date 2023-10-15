@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import VideoCapture from "./VideoCapture";
 
@@ -10,11 +11,15 @@ export function GeoLocator() {
   let buildingName;
   let lng;
   let lat;
-  let found = false;
 
   const [Listing, setListing] = useState([]);
+  const [found, setFound] = useState(false);
 
-  const num = Math.floor(Math.random() * 4) + 1
+  const update = () => {
+    setFound(true);
+  }
+
+  const num = Math.floor(Math.random() * 7) + 1
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("http://127.0.0.1:8000/api/todos/" + num + "/");
@@ -29,19 +34,18 @@ export function GeoLocator() {
   buildingName = Listing.fullname
   lng = parseFloat(Listing.longitude)
   lat = parseFloat(Listing.latitude)
-  
 
-  console.log(lat)
-
+  console.log(abrev)
 
   function success(pos) {
     const crd = pos.coords;
-    if (crd.longitude < lng + 10.0 &&
-        crd.longitude > lng - 10.0 &&
-        crd.latitude < lat + 10.0 &&
-        crd.latitude > lat - 10.0) {
+    if (crd.longitude < lng + 5.0 &&
+        crd.longitude > lng - 5.0 &&
+        crd.latitude < lat + 5.0 &&
+        crd.latitude > lat - 5.0) {
+          update()
           alert("You found " + buildingName + "!")
-          found = true
+          
         } else {
           alert("Keep looking around campus for the building of the day!")
         }
@@ -59,7 +63,7 @@ export function GeoLocator() {
   
   options = {
     enableHighAccuracy: false,
-    timeout: 5000,
+    timeout: 50000,
     maximumAge: 0,
   };
   
@@ -77,11 +81,12 @@ export function GeoLocator() {
   );
   }
 
+
   return (
     <div>
-      <button className='bg-red-600 ml-24 mt-96 h-12 w-56' onClick={() => getLoc()}>Am I near?</button>
+      <button className='bg-red-600 ml-24 h-12 w-56' onClick={() => getLoc()}>Am I near?</button>
       <div className="video">
-      <VideoCapture isVisible={true}/>
+        <VideoCapture isVisible={found} /> {/* Use found, not this.found */}
       </div>
     </div>
   );
@@ -89,3 +94,4 @@ export function GeoLocator() {
 }
 
 export default GeoLocator;
+
