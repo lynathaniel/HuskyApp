@@ -73,10 +73,12 @@ public class BuildingPicker {
 
         // to string need to display all fields 
         public String toString(){
-            return "abbreviation=" + abrev + ",\n" + 
-                    "Name=" + name + ",\n" + 
-                    "Latitude=" + lat + ",\n" + 
-                    "Longitude=" + longi + ",\n";
+            return "Building{" +
+                    "abbreviation='" + abrev + "\' '," + 
+                    "name='" + name + "\' '," + 
+                    "latitude=" + lat + "," + 
+                    "longitude=" + longi +
+                    "}";
         }
     }
 }
