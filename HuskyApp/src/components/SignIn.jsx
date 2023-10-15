@@ -14,6 +14,7 @@ export function SignIn() {
   return (
     <div className="signin-form">
       <h2>Join BeGo📍</h2>
+      
       <form>
         <div>
           <label>Email:</label>
