@@ -35,7 +35,7 @@ export function Sidebar() {
 
                 <div className={`top-0 right-0 fixed bg-white w-[35vw] h-full p-10 ${isOpen ? 'translate-x-0': 'translate-x-full'} ease-in-out duration-300`}>
 
-                    <h2 className="text-2xl text-black">Todays Spot <Date/></h2>
+                    <h2 className="text-xl text-black">Todays Spot <Date/></h2>
                     <ChatLog/>
                 </div>
                 
