@@ -39,10 +39,12 @@ export function GeoLocator() {
 
   function success(pos) {
     const crd = pos.coords;
-    if (crd.longitude < lng + 5.0 &&
-        crd.longitude > lng - 5.0 &&
-        crd.latitude < lat + 5.0 &&
-        crd.latitude > lat - 5.0) {
+    console.log(crd.latitude + ", " + crd.longitude)
+    console.log("expected: " + lat + ", " + lng)
+    if (crd.longitude < lng + 0.0001 &&
+        crd.longitude > lng - 0.0001 &&
+        crd.latitude < lat + 0.0001 &&
+        crd.latitude > lat - 0.0001) {
           update()
           alert("You found " + buildingName + "!")
           
@@ -67,7 +69,9 @@ export function GeoLocator() {
     maximumAge: 0,
   };
   
-  function getLoc() { id = navigator.geolocation.getCurrentPosition(
+  function getLoc() { 
+    console.log("smd")
+    id = navigator.geolocation.watchPosition(
     success,
     error,
     // maximumAge refers to the age of the location data in cache,
@@ -84,7 +88,7 @@ export function GeoLocator() {
 
   return (
     <div>
-      <button className='bg-red-600 ml-24 h-12 w-56' onClick={() => getLoc()}>Am I near?</button>
+      <button className='MeNear' onClick={() => getLoc()}>Am I near?</button>
       <div className="video">
         <VideoCapture isVisible={found} /> {/* Use found, not this.found */}
       </div>
