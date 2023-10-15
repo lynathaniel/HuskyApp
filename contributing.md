@@ -26,13 +26,16 @@ List any prerequisites that users need to have installed or set up before they c
    git clone https://github.com/your-username/your-repo.git
 
 2. Change into the project directory:
-cd your-repo
+   ```bash
+      cd your-repo
 
-3. Install project dependencies:
-npm install
+4. Install project dependencies:
+   ```bash
+      npm install
 
-4. Start the development server:
-npm run dev
+5. Start the development server:
+   ```bash
+      npm run dev
 
 Open your web browser and navigate to http://localhost:3000 to view the application.
 
