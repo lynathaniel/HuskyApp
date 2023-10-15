@@ -75,8 +75,8 @@ public class BuildingPicker {
         public String toString(){
             return "abbreviation=" + abrev + ",\n" + 
                     "Name=" + name + ",\n" + 
-                    "Latitude=" + ",\n" + 
-                    "Longitude=" + ",\n";
+                    "Latitude=" + lat + ",\n" + 
+                    "Longitude=" + longi + ",\n";
         }
     }
 }
